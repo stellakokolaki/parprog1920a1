@@ -1,8 +1,7 @@
-// compile with: gcc -Wall -O2 no-sse.c -o no-see -DN=10000 -DR=10000
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
-
+// compile with: gcc -Wall -O2 no-sse.c -o no-see -DN=10000 -DR=10000
 
 void get_walltime(double *wct){
 	struct timeval tp;
@@ -18,8 +17,8 @@ int main(){
 	int i, j;
 
 // allocate test arrays
-	array01 = (float*) malloc(N* M* sizeof(float));
-  array02= (float*) malloc(N* M* sizeof(float));
+ 	 array01 = (float*) malloc(N* M* sizeof(float));
+  	 array02= (float*) malloc(N* M* sizeof(float));
 
 //initialize all arrays - cache warm-up
 	for(i=0; i < N *M; i++){
@@ -43,10 +42,11 @@ int main(){
 	printf("%f\n", te-ts);
 
 	mflops = (2.0*M*N)/((te-ts)*1e6);
-  printf("MFLOPS/sec = %f\n",mflops);
+  	printf("MFLOPS/sec = %f\n",mflops);
 
 // free arrays
 	free(array01);
-  free(array02);
+  	free(array02);
+	
 	return 0;
 }
