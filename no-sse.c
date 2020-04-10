@@ -21,7 +21,7 @@ int main(){
 	array01 = (float*) malloc(N* M* sizeof(float));
   	array02 = (float*) malloc(N* M* sizeof(float));
 
-//initialize all arrays - cache warm-up
+// initialize all arrays - cache warm-up
 	for(i=0; i < N *M; i++){
 		array01[i] = ((float)rand()/(float)(RAND_MAX));
   		array02[i] = ((float)rand()/(float)(RAND_MAX));
@@ -29,11 +29,11 @@ int main(){
 	if (array01==NULL) exit(1);
 	if (array02==NULL) exit(1);
 
-//Starting time
+// starting time
 	get_walltime(&ts);
 	printf("\nTime Start :%f\n", ts);
 
-//Create table images
+// create table images
 	for(i = 1; i < N - 1; i++){
 		for(j = 1; j < M - 1; j++){
 			array02[j] = (array01[(i-1)+(j-1)] * k0) + (array01[(i-1)+j] * k1) + (array01[(i-1)+(j+1)] * k2) + (array01[i+(j-1)] * k3) + (array01[i+j] * k4) + (array01[i+(j+1)] * k5) + (array01[(i+1)+(j-1)] * k6) + (array01[(i+1)+j] * k7) + (array01[(i+1)+(j+1)] * k8);
