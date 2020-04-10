@@ -12,7 +12,7 @@ void get_walltime(double *wct){
 int main(){
 
 	float *array01, *array02;
-  float k0 = 0.5, k1 = 0.5, k2 = 0.5, k3 = 0.5, k4 =5.0, k5 = 0.5, k6 = 0.5, k7 = 0.5, k8 = 0.5;
+  	float k0 = 0.5, k1 = 0.5, k2 = 0.5, k3 = 0.5, k4 =5.0, k5 = 0.5, k6 = 0.5, k7 = 0.5, k8 = 0.5;
 	double ts, te, mflops;
 	int i, j;
 
