@@ -40,7 +40,7 @@ int main(){
 		}
 	}
 
-// compute mflops/sec (2 operations per R*N passes)
+// compute mflops/sec (2 operations per M*N passes)
 	get_walltime(&te);		
 	printf("End Time:%f\n", te);
 	printf("Calculating time : %f\n", te-ts);
@@ -51,5 +51,6 @@ int main(){
 // free arrays
 	free(array01);
   	free(array02);
+	
 	return 0;
 }
