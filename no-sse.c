@@ -22,8 +22,11 @@ int main(){
  //initialize all arrays - cache warm-up
 	for(i=0; i < N *M; i++){
 		array01[i] = ((float)rand()/(float)(RAND_MAX));
-  	array02[i] = ((float)rand()/(float)(RAND_MAX));
+  		array02[i] = ((float)rand()/(float)(RAND_MAX));
 	}
+	if (array01==NULL) exit(1);
+	if (array02==NULL) exit(1);
+
  //Starting time
 	get_walltime(&ts);
 	printf("%f\n", ts);
