@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
-// compile with: gcc -Wall -O2 no-sse.c -o no-see -DN=10000 -DR=10000
+// compile with: gcc -Wall -O2 no-sse.c -o no-see -DN=10000 -DM=10000
 
 void get_walltime(double *wct){
 	struct timeval tp;
@@ -36,7 +36,8 @@ int main(){
 		}
 	}
 
-// compute & print mflops/sec (2 operations per R*N passes)
+
+// get ending time  & print mflops/sec (2 operations per R*N passes)
 	get_walltime(&te);	
 	printf("%f\n", te);
 	printf("%f\n", te-ts);
